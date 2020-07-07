@@ -51,6 +51,27 @@ class Array {
         this.length--;
         return value;
     }
+
+    get(index) {
+        if (index < 0 || index >= this.length) {
+            throw new Error('Index error');
+        }
+        return newMem.get(this.ptr + index);
+    }
+
+    insert(index, value) {
+        if (index < 0 || index >= this.length) {
+            throw new Error('Index error');
+        }
+
+        if (this.length >= this._capacity) {
+            this._resize((this.length + 1) * Array.SIZE_RATIO);
+        }
+
+        newMem.copy(this.ptr + index + 1, this.ptr + index, this.length - index);
+        newMem.set(this.ptr + index, value);
+        this.length++;
+    }
 }
 
 function main() {
@@ -60,18 +81,22 @@ function main() {
     let arr = new Array();
 
     // Add an item to the array
-    arr.push(3);
-    arr.push(5);
-    arr.push(15);
-    arr.push(19);
-    arr.push(45);
-    arr.push(10);
+    arr.push('Tauhida');
+    // arr.push(5);
+    // arr.push(15);
+    // arr.push(19);
+    // arr.push(45);
+    // arr.push(10);
 
-    arr.pop();
-    arr.pop();
-    arr.pop();
+    // arr.pop();
+    // arr.pop();
+    // arr.pop();
+    // arr.pop();
+    // arr.pop();
 
-    return arr;
+    arr.get(0)
+
+    return arr.get(0);
 }
 
 console.log(main());
