@@ -42,6 +42,15 @@ class Array {
         //increase the capacity value to the new capacity
         this._capacity = size;
     }
+
+    pop() {
+        if (this.length == 0) {
+            throw new Error('Index error');
+        }
+        const value = newMem.get(this.ptr + this.length - 1);
+        this.length--;
+        return value;
+    }
 }
 
 function main() {
@@ -55,17 +64,12 @@ function main() {
     arr.push(5);
     arr.push(15);
     arr.push(19);
-    // arr.push(45);
-    // arr.push(10);
-    // arr.push(3);
-    // arr.push(5);
-    // arr.push(15);
-    // arr.push(19);
-    // arr.push(45);
+    arr.push(45);
+    arr.push(10);
 
-    // arr.pop();
-    // arr.pop();
-    // arr.pop();
+    arr.pop();
+    arr.pop();
+    arr.pop();
 
     return arr;
 }
