@@ -96,7 +96,7 @@ function main() {
 
     arr.get(0)
 
-    return arr.get(0);
+    return arr;
 }
 
 console.log(main());
