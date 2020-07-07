@@ -8,7 +8,6 @@ class memory {
         if (this.head + size > this.memory.length) {
             return null;
         }
-
         let start = this.head;
 
         this.head += size;
@@ -16,7 +15,7 @@ class memory {
     }
 
     free(ptr) {}
-
+    
     copy(toIdx, fromIdx, size) {
         if (fromIdx === toIdx) {
             return;
