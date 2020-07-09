@@ -33,3 +33,13 @@
         - The result was NaN since I was trying to return a string.
     - What is the purpose of the \_resize() function in your Array class?
         - So that each time an item needs to be added, the size of the array doesn't need to be resized each time - wasting resources. Using the resize funciton, it allows us to check when there is no empty space remaining in the capacity of the array, and then a new, longer space, in memory before adding a new value. We are not able to add a new value if there is not a capacity for it, since there are likely other items (not in our array) that are stored contiguously, after the end of our array.
+5. URLify a string
+
+#### Not completed yet:
+6. Filtering an array
+7. Max sum in the array
+8. Merge arrays
+9. Remove characters
+10. Products
+11. 2D array
+12. String rotation
