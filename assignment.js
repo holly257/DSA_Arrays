@@ -48,10 +48,20 @@ function sum(numArr) {
     //need end loop
     //third to loop through
     //- find sum of each
-    
+    for(let i=0; i<numArr.length; i++){
+        for(let j=i; j<numArr.length; j++){
+            let sum = 0
+            for(let k= i; k<=j; k++){
+                sum = sum + k
+                console.log('sum',sum, k)
+                //console.log(i, j, k)
+            }
+        }
+    }
+    return 
 }
 
-//console.log(sum([4, 6, -3, 5, -2, 1]))
+console.log(sum([4, 6, -3, 5, -2, 1]))
 
 //8. Merge arrays
 
