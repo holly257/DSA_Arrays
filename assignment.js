@@ -24,7 +24,7 @@ function lessThanFive(numArray) {
     if (numArray[0] < 5) {
         let result = lessThanFive(numArray.slice(1));
         item = numArray[0];
-        lessThan.push(item)
+        lessThan.push(item);
 
         if (result.length != 0) {
             result.forEach(num => lessThan.push(num));
@@ -37,18 +37,19 @@ function lessThanFive(numArray) {
 //console.log(lessThanFive([1, 2, 3, 4, 5, 6, 1, 7, 8]));
 
 //7. Max sum in the array - for sequence of contiguous nums
-//not what they were asking for
+//in progress
+//value returning is too high
 function sum(numArr) {
     //keep track of highest sum
     let highestSum = 0;
-    
-    for(let i=0; i<numArr.length; i++){
-        for(let j=i; j<numArr.length; j++){
-            let sum = 0
-            for(let k= i; k<=j; k++){
-                sum = sum + k
+
+    for (let i = 0; i < numArr.length; i++) {
+        for (let j = i; j < numArr.length; j++) {
+            let sum = 0;
+            for (let k = i; k <= j; k++) {
+                sum = sum + k;
                 //console.log(sum, k)
-                if(sum > highestSum){
+                if (sum > highestSum) {
                     highestSum = sum;
                 }
             }
@@ -57,9 +58,37 @@ function sum(numArr) {
     return highestSum;
 }
 
-console.log(sum([4, 6, -3, 5, -2, 1]))
+//console.log(sum([4, 6, -3, 5, -2, 1]))
 
 //8. Merge arrays
+//in progress
+//works if both arrays grow equally
+function merge(arr1, arr2) {
+    let finalArr = [];
+
+    for (let i = 0; i < arr1.length; i++) {
+        finalArr.push(arr1[i]);
+    }
+    for (let i = 0; i < arr2.length; i++) {
+        finalArr.push(arr2[i]);
+    }
+
+    for (let j = 0; j < finalArr.length; j++) {
+        let first = finalArr[j];
+        let second = finalArr[j + 1];
+        if (first > second) {
+            finalArr[j] = second;
+            finalArr[j + 1] = first;
+        }
+    }
+
+    return finalArr;
+}
+//works
+//console.log(merge([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]));
+//doesn't work
+//console.log(merge([9, 10, 11, 12], [2, 3, 5, 8, 9, 10]));
+//output: [1, 2, 3, 3, 5, 6, 8, 8, 9, 10, 11]
 
 //9. Remove characters
 function removeChar(value, char) {
