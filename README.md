@@ -38,6 +38,14 @@
 6. Filtering an array
     - Imagine you have an array of numbers. Write an algorithm to remove all numbers less than 5 from the array. 
     - DO NOT use Array's built-in .filter() method here; write the algorithm from scratch.
+7. Max sum in the array
+    - You are given an array containing positive and negative integers. Write an algorithm which will find the largest sum in a continuous sequence.
+    - Input: [4, 6, -3, 5, -2, 1]
+    - Output: 12
+8. Merge arrays
+    - Imagine you have 2 arrays which have already been sorted. Write an algorithm to merge the 2 arrays into a single array, which should also be sorted.
+    - Input:[1, 3, 6, 8, 11] and [2, 3, 5, 8, 9, 10]
+    - Output:[1, 2, 3, 3, 5, 6, 8, 8, 9, 10, 11]
 9. Remove characters
     - Write an algorithm that deletes given characters from a string. 
     - For example, given a string of "Battle of the Vowels: Hawaii vs. Grozny" and the characters to be removed are "aeiou", the algorithm should transform the original string to "Bttl f th Vwls: Hw vs. Grzny". 
@@ -50,9 +58,7 @@
 
 
 #### Not completed yet:
-7. Max sum in the array
-8. Merge arrays
+12. String rotation
 
 #### Not Started:
 11. 2D array
-12. String rotation
