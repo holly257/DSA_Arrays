@@ -123,26 +123,22 @@ function findProd(array) {
 // 12. String rotation
 function isARotation(string, str2) {
     const output = [];
-    function traverse(string, perm = '') {
-        const seen = new Set();
-        if (!string) output.push(perm);
-        for (let i = 0; i < string.length; i++) {
-            if (!seen.has(string[i])) {
-                seen.add(string[i]);
-                traverse(string.slice(0, i) + string.slice(i + 1), perm + string[i]);
-            }
-        }
+
+    for (let i = 0; i < string.length; i++) {
+        let remaining = string.slice(1);
+        let newStr = ''.concat(remaining, string.charAt(0));
+        output.push(newStr);
+        string = newStr;
     }
-    traverse(string);
-    console.log(output);
+
     if (output.includes(str2)) {
         return true;
     } else return false;
 }
 
-//console.log(isARotation('amazon', 'azonma'))
+console.log(isARotation('amazon', 'azonma'));
 //false
-//console.log(isARotation('amazon', 'azonam'))
+console.log(isARotation('amazon', 'azonam'));
 //true
 
 //assign Big O for all functions

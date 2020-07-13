@@ -54,11 +54,13 @@
     - Given an array of numbers, write an algorithm that outputs an array where each index is the product of all the numbers in the input array except for the number at each current index. 
     - Input:[1, 3, 9, 4]
     - Output:[108, 36, 12, 27]
-
+12. String rotation
+    - Given 2 strings, str1 and str2, write a program that checks if str2 is a rotation of str1.
+    - Input: amazon, azonma
+        - Output: False
+    - Input: amazon, azonam
+        - Output: true
 
 
 #### Not completed yet:
-12. String rotation
-
-#### Not Started:
 11. 2D array
