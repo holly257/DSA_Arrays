@@ -42,23 +42,19 @@ function sum(numArr) {
     //keep track of highest sum
     let highestSum = 0;
     
-    //generate sequences 
-
-    //need start loop
-    //need end loop
-    //third to loop through
-    //- find sum of each
     for(let i=0; i<numArr.length; i++){
         for(let j=i; j<numArr.length; j++){
             let sum = 0
             for(let k= i; k<=j; k++){
                 sum = sum + k
-                console.log('sum',sum, k)
-                //console.log(i, j, k)
+                //console.log(sum, k)
+                if(sum > highestSum){
+                    highestSum = sum;
+                }
             }
         }
     }
-    return 
+    return highestSum;
 }
 
 console.log(sum([4, 6, -3, 5, -2, 1]))

@@ -34,12 +34,21 @@
     - What is the purpose of the \_resize() function in your Array class?
         - So that each time an item needs to be added, the size of the array doesn't need to be resized each time - wasting resources. Using the resize funciton, it allows us to check when there is no empty space remaining in the capacity of the array, and then a new, longer space, in memory before adding a new value. We are not able to add a new value if there is not a capacity for it, since there are likely other items (not in our array) that are stored contiguously, after the end of our array.
 5. URLify a string
+    - Replace any spaces with a %20. Write a method that takes in a string and replaces all its empty spaces with a %20
+6. Filtering an array
+    - Imagine you have an array of numbers. Write an algorithm to remove all numbers less than 5 from the array. 
+    - DO NOT use Array's built-in .filter() method here; write the algorithm from scratch.
+9. Remove characters
+    - Write an algorithm that deletes given characters from a string. 
+    - For example, given a string of "Battle of the Vowels: Hawaii vs. Grozny" and the characters to be removed are "aeiou", the algorithm should transform the original string to "Bttl f th Vwls: Hw vs. Grzny". 
+    - Do not use Javascript's filter, split, or join methods.
+
+
 
 #### Not completed yet:
-6. Filtering an array
 7. Max sum in the array
 8. Merge arrays
-9. Remove characters
+
 10. Products
 11. 2D array
 12. String rotation
