@@ -42,6 +42,10 @@
     - Write an algorithm that deletes given characters from a string. 
     - For example, given a string of "Battle of the Vowels: Hawaii vs. Grozny" and the characters to be removed are "aeiou", the algorithm should transform the original string to "Bttl f th Vwls: Hw vs. Grzny". 
     - Do not use Javascript's filter, split, or join methods.
+10. Products
+    - Given an array of numbers, write an algorithm that outputs an array where each index is the product of all the numbers in the input array except for the number at each current index. 
+    - Input:[1, 3, 9, 4]
+    - Output:[108, 36, 12, 27]
 
 
 
@@ -49,6 +53,6 @@
 7. Max sum in the array
 8. Merge arrays
 
-10. Products
+#### Not Started:
 11. 2D array
 12. String rotation

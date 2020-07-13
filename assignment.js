@@ -107,6 +107,23 @@ function removeChar(value, char) {
 //Output: 'Bttl f th Vwls: Hw vs. Grzny'
 
 // 10. Products
+function findProd(array) {
+    let sumArray = [];
+    let sum = 1;
+
+    for (let i = 0; i < array.length; i++) {
+        sum = sum * array[i];
+    }
+
+    for (let i = 0; i < array.length; i++) {
+        sumArray.push(sum / array[i]);
+    }
+    return sumArray;
+}
+
+console.log(findProd([1, 3, 9, 4]));
+//Output:[108, 36, 12, 27]
+
 // 11. 2D array
 // 12. String rotation
 
