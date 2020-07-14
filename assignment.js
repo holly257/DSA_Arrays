@@ -119,6 +119,60 @@ function findProd(array) {
 // 11. 2D array
 //input and output should be seperate arrays
 //not modifying existing arrays or else everything will be 0
+function deepCopy(arr) {
+    let copy = [];
+    arr.forEach(elem => {
+        if (Array.isArray(elem)) {
+            copy.push(deepCopy(elem));
+        } else {
+            copy.push(elem);
+        }
+    });
+    return copy;
+}
+
+function alterArrayOnZero(array) {
+    let newArr = deepCopy(array);
+
+    for (let i = 0; i < newArr.length; i++) {
+        for (let j = 0; j < newArr.length; j++) {
+            if (array[i][j] === 0) {
+                let foundRow = i;
+                let foundCol = j;
+
+                for (let k = 0; k < newArr.length; k++) {
+                    newArr[foundRow][k] = 0;
+                    newArr[k][foundCol] = 0;
+                }
+            }
+        }
+    }
+
+    return newArr;
+}
+
+let test = [
+    [1, 2, 3, 4, 3],
+    [5, 6, 17, 18, 47],
+    [9, 10, 11, 12, 8],
+    [28, 4, 22, 46, 7],
+    [1, 23, 25, 27, 9],
+];
+let myArray = [
+    [1, 0, 1, 1, 0],
+    [0, 1, 1, 1, 0],
+    [1, 1, 1, 1, 1],
+    [1, 0, 1, 1, 1],
+    [1, 1, 1, 1, 1],
+];
+console.log(alterArrayOnZero(myArray));
+
+//output:
+// [[0,0,0,0,0],
+// [0,0,0,0,0],
+// [0,0,1,1,0],
+// [0,0,0,0,0],
+// [0,0,1,1,0]];
 
 // 12. String rotation
 function isARotation(string, str2) {
@@ -136,9 +190,9 @@ function isARotation(string, str2) {
     } else return false;
 }
 
-console.log(isARotation('amazon', 'azonma'));
+//console.log(isARotation('amazon', 'azonma'));
 //false
-console.log(isARotation('amazon', 'azonam'));
+//console.log(isARotation('amazon', 'azonam'));
 //true
 
 //assign Big O for all functions
