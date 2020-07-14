@@ -1,5 +1,5 @@
 //5. URLify a string
-////    O(1)
+////    O(n) Linear time
 function noSpace(value) {
     if (value === '') {
         return '';
@@ -9,11 +9,13 @@ function noSpace(value) {
     }
     return value[0] + noSpace(value.slice(1));
 }
-
 //console.log(noSpace('tauhida parveen'));
 //console.log(noSpace('www.thinkful.com /tauh ida parv een'));
 
+
+
 //6. Filtering an array
+////    O(n) Linear time
 function lessThanFive(numArray) {
     let lessThan = [];
     let item = null;
@@ -35,7 +37,10 @@ function lessThanFive(numArray) {
 }
 //console.log(lessThanFive([1, 2, 3, 4, 5, 6, 1, 7, 8]));
 
+
+
 //7. Max sum in the array - for sequence of contiguous nums
+////    O(n^3) Quadratic time
 function sum(numArr) {
     //keep track of highest sum
     let highestSum = 0;
@@ -53,11 +58,13 @@ function sum(numArr) {
     }
     return highestSum;
 }
-
 //console.log(sum([4, 6, -3, 5, -2, 1]));
 //output: should be 12
 
+
+
 //8. Merge arrays
+////    O(n) Linear time
 function merge(arr1, arr2) {
     let finalArr = [];
 
@@ -82,7 +89,10 @@ function merge(arr1, arr2) {
 //console.log(merge([9, 10, 11, 12], [2, 3, 5, 8, 9, 10]));
 //output: [1, 2, 3, 3, 5, 6, 8, 8, 9, 10, 11]
 
+
+
 //9. Remove characters
+////    O(n) Linear time
 function removeChar(value, char) {
     if (!value.length || !char.length) {
         return '';
@@ -98,7 +108,10 @@ function removeChar(value, char) {
 //console.log(removeChar('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'));
 //Output: 'Bttl f th Vwls: Hw vs. Grzny'
 
+
+
 // 10. Products
+////    O(n) Linear time
 function findProd(array) {
     let sumArray = [];
     let sum = 1;
@@ -112,13 +125,14 @@ function findProd(array) {
     }
     return sumArray;
 }
-
 //console.log(findProd([1, 3, 9, 4]));
 //Output:[108, 36, 12, 27]
 
+
+
 // 11. 2D array
-//input and output should be seperate arrays
-//not modifying existing arrays or else everything will be 0
+////    O(n^3) Quadratic time
+//////helper function to deep copy array
 function deepCopy(arr) {
     let copy = [];
     arr.forEach(elem => {
@@ -165,8 +179,7 @@ let myArray = [
     [1, 0, 1, 1, 1],
     [1, 1, 1, 1, 1],
 ];
-console.log(alterArrayOnZero(myArray));
-
+//console.log(alterArrayOnZero(myArray));
 //output:
 // [[0,0,0,0,0],
 // [0,0,0,0,0],
@@ -174,7 +187,10 @@ console.log(alterArrayOnZero(myArray));
 // [0,0,0,0,0],
 // [0,0,1,1,0]];
 
+
+
 // 12. String rotation
+////    O(n) Linear time
 function isARotation(string, str2) {
     const output = [];
 
@@ -194,5 +210,3 @@ function isARotation(string, str2) {
 //false
 //console.log(isARotation('amazon', 'azonam'));
 //true
-
-//assign Big O for all functions
